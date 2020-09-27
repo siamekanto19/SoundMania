@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1e88e5" />
+    <!-- Linkings -->
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>SoundMania</title>
+  </head>
+
+  <body>
+    <!-- Main Section -->
+    <main>
+      <h2>Enjoy all of your familiar sounds together in one place</h2>
+      <div class="main-container">
+        <!-- Sound Cards -->
+        <div class="card" id="cat">
+          <img src="assets/img/cat.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="dog">
+          <img src="assets/img/dog.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="cow">
+          <img src="assets/img/cow.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="wolf">
+          <img src="assets/img/wolf.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="fire">
+          <img src="assets/img/fire.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="aeroplane">
+          <img src="assets/img/airplane.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="street">
+          <img src="assets/img/road.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="bird">
+          <img src="assets/img/bird.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="chopper">
+          <img src="assets/img/helicopter.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="drawing">
+          <img src="assets/img/painting.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="racing-car">
+          <img src="assets/img/racing-car.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="pumpkin">
+          <img src="assets/img/pumpkin.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="marbles">
+          <img src="assets/img/marbles.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="storm">
+          <img src="assets/img/storm.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="water">
+          <img src="assets/img/water-drops.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="crying">
+          <img src="assets/img/cry.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="party">
+          <img src="assets/img/party.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="photocopy">
+          <img src="assets/img/photocopier.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="car">
+          <img src="assets/img/old-car.svg" alt="" class="card-img" />
+        </div>
+        <div class="card" id="frog">
+          <img src="assets/img/frog.svg" alt="" class="card-img" />
+        </div>
+      </div>
+
+      <div class="audio-files">
+        <audio src="assets/sounds/airplane.mp3"class="aeroplane-sound" loop></audio>
+        <audio src="assets/sounds/busy-street.mp3"class="street-sound"loop></audio>
+        <audio src="assets/sounds/cartoon-birds.mp3" class="bird-sound" loop></audio>
+        <audio src="assets/sounds/chopper.mp3"class="chopper-sound" loop></audio>
+        <audio src="assets/sounds/fast-drawing.mp3"class="drawing-sound" loop></audio>
+        <audio src="assets/sounds/formula-1.mp3" class="racing-car" loop></audio>
+        <audio src="assets/sounds/haloween.mp3" class="haloween" loop></audio>
+        <audio src="assets/sounds/marbles.mp3" class="marbles" loop></audio>
+        <audio src="assets/sounds/stormy-night.mp3" class="storm" loop></audio>
+        <audio src="assets/sounds/water.mp3" class="water" loop></audio>
+        <audio src="assets/sounds/woman-crying.mp3" class="crying" loop></audio>
+        <audio src="assets/sounds/party-crowd.mp3" class="party" loop></audio>
+        <audio src="assets/sounds/photocopy.mp3" class="photocopy" loop></audio>
+        <audio src="assets/sounds/old-car-engine.mp3" class="car" loop></audio>
+        <audio src="assets/sounds/frog.mp3" class="frog" loop></audio>
+        <audio src="assets/sounds/cat.mp3" class="cat" loop></audio>
+        <audio src="assets/sounds/dog.mp3" class="dog" loop></audio>
+        <audio src="assets/sounds/cow.mp3" class="cow" loop></audio>
+        <audio src="assets/sounds/wolf.mp3" class="wolf" loop></audio>
+        <audio src="assets/sounds/fire.mp3" class="fire" loop></audio>
+      </div>
+    </main>
+    <!-- Popup -->
+    <div class="popup" id="popup">
+      <h3>How to use the SoundMania App</h3>
+      <p>
+        Click on the icon to play its sound and click on the same icon again to
+        pause its sound.
+      </p>
+      <p>
+        Rotation of the icon indicates that it's sound is currently being
+        played.
+      </p>
+      <p>
+        You can mix multiple sounds at once by clicking on their icons without
+        pausing.
+      </p>
+      <p>
+        To stop a sound from playing infinitely, you must stop it's rotation by
+        clicking on it.
+      </p>
+      <h2>Enjoy !</h2>
+      <button class="pop-close" onclick="popupClose()">I Understand</button>
+    </div>
+    <div class="black-background"></div>
+    <!-- Fooeter -->
+    <section id="footer">
+      <h3>Thanks for visiting. More Sounds will be added soon...</h3>
+      <h4>
+        Sounds : <a href="http://soundbible.com/">SoundBible</a><br />Icons :
+        <a href="https://flaticon.com">FlatIcon</a>
+      </h4>
+      <h3>
+        Made with <span class="red-heart">❤</span> in Bangladesh<br />By
+        <a href="https://facebook.com/sheikhsiamrouf">Siam</a>
+      </h3>
+    </section>
+    <!-- Theme Selection -->
+    <div class="theme-select">
+      <span class="theme gray" id="gray"></span>
+      <span class="theme green" id="green"></span>
+      <span class="theme red" id="red"></span>
+      <span class="theme purple" id="purple"></span>
+      <span class="theme black" id="black"></span>
+      <span class="theme blue" id="blue"></span>
+      <span class="theme orange" id="orange"></span>
+      <span class="theme paste" id="paste"></span>
+    </div>
+
+    <button class="theme-button" onclick="themeChange()">Change Theme</button>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.0.0-beta.19/dist/shoelace/shoelace.esm.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,436 @@
+/* Imports */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito";
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: #1e88e5;
+}
+
+.rotate {
+  animation: rotation 3s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/* Variables */
+
+$primary-color: #1e88e5;
+$secondary-color: #333;
+$rounded: 50%;
+
+/* Mobile Styles */
+
+@media only screen and (max-width: 968px) {
+  main {
+    height: 100%;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      color: white;
+      max-width: 90%;
+      margin: auto;
+      padding-top: 3rem;
+      font-size: 2rem;
+    }
+
+    .main-container {
+      max-width: 90%;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 5rem;
+      height: 5rem;
+      background-color: #f9f9f9;
+      position: relative;
+      border-radius: $rounded;
+      margin-top: 2rem;
+      margin-left: 1.5rem;
+      cursor: pointer;
+
+      img {
+        max-width: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .card:hover {
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    }
+  }
+
+  .popup {
+    background-color: #f9f9f9;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 2rem;
+    border-radius: 25px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    transition-duration: 1s;
+    margin-top: -500%;
+    h3 {
+      margin: auto;
+      text-align: center;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+    }
+
+    h2 {
+      max-width: 10rem;
+      text-align: center;
+      margin: auto;
+      margin-top: 1rem;
+    }
+
+    .pop-close {
+      padding: 0.5rem 3rem;
+      margin: auto;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  .black-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: black;
+    opacity: 0.8;
+    display: none;
+  }
+
+  #footer {
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+
+    h3 {
+      padding: 1rem 0;
+      max-width: 80%;
+      margin: auto;
+    }
+
+    h4 {
+      text-align: center;
+      margin: auto;
+      margin-top: 1rem;
+      max-width: 80%;
+    }
+
+    .red-heart {
+      color: #e74c3c;
+    }
+  }
+
+  .theme-select {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    justify-content: space-around;
+    border-radius: 25px;
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    margin-top: -200%;
+    transition-duration: 0.5s;
+
+    .theme {
+      display: block;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: $rounded;
+      margin: 1rem;
+      cursor: pointer;
+    }
+    .theme:hover {
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    }
+    .green {
+      background-color: #229954;
+    }
+    .gray {
+      background-color: #333;
+    }
+    .red {
+      background-color: #e74c3c;
+    }
+    .purple {
+      background-color: #7d3c98;
+    }
+    .black {
+      background-color: black;
+    }
+    .blue {
+      background-color: $primary-color;
+    }
+    .orange {
+      background-color: #d35400;
+    }
+
+    .paste {
+      background-color: #16a085;
+    }
+  }
+
+  .theme-button {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -1%);
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop Styles */
+
+@media only screen and (min-width: 769px) {
+  main {
+    height: 100%;
+    width: 100%;
+
+    h2 {
+      text-align: center;
+      color: white;
+      max-width: 80%;
+      margin: auto;
+      padding-top: 5rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  .main-container {
+    max-width: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: 7.5rem;
+    height: 7.5rem;
+    background-color: #f9f9f9;
+    position: relative;
+    border-radius: $rounded;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+
+    img {
+      max-width: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .card:hover {
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+  }
+
+  .popup {
+    background-color: #f9f9f9;
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 2rem;
+    border-radius: 25px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    transition-duration: 1s;
+    margin-top: -500%;
+    h3 {
+      margin: auto;
+      text-align: center;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.125rem;
+    }
+
+    h2 {
+      max-width: 10rem;
+      text-align: center;
+      margin: auto;
+      margin-top: 1rem;
+    }
+
+    .pop-close {
+      padding: 0.5rem 3rem;
+      margin: auto;
+      margin-top: 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: $primary-color;
+      border: none;
+      border-radius: 25px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+  .black-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: black;
+    opacity: 0.9;
+    display: none;
+  }
+
+  #footer {
+    text-align: center;
+    color: white;
+    margin-top: 2rem;
+
+    h3 {
+      padding: 1rem 0;
+      max-width: 80%;
+      margin: auto;
+    }
+
+    h4 {
+      text-align: center;
+      margin: auto;
+      margin-top: 1rem;
+      max-width: 80%;
+    }
+
+    .red-heart {
+      color: #e74c3c;
+    }
+  }
+  .theme-select {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    border-radius: 25px;
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    margin-top: -200%;
+    transition-duration: 0.75s;
+
+    .theme {
+      display: block;
+      height: 3.5rem;
+      width: 3.5rem;
+      border-radius: $rounded;
+      margin: 1rem;
+      cursor: pointer;
+    }
+    .theme:hover {
+      box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.45);
+    }
+    .green {
+      background-color: #229954;
+    }
+    .gray {
+      background-color: #333;
+    }
+    .red {
+      background-color: #e74c3c;
+    }
+    .purple {
+      background-color: #7d3c98;
+    }
+    .black {
+      background-color: black;
+    }
+    .blue {
+      background-color: $primary-color;
+    }
+    .orange {
+      background-color: #d35400;
+    }
+    .paste {
+      background-color: #16a085;
+    }
+  }
+
+  .theme-button {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -1%);
+    border: none;
+    background: none;
+    text-decoration: underline;
+    font-size: 1rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
